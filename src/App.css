@@ -126,7 +126,7 @@ nav li {
   font-size: 25px;
   display: flex;
   align-items: center;
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Inter', sans-serif;
 }
 .title span {
   width: 4px;
@@ -1478,7 +1478,7 @@ nav {
     font-size: 20px;
     display: flex;
     align-items: center;
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Inter', sans-serif;
     margin: 0px 0 30px 0;
   }
 
