@@ -126,7 +126,7 @@ nav li {
   font-size: 25px;
   display: flex;
   align-items: center;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
 }
 .title span {
   width: 4px;
@@ -147,7 +147,7 @@ nav li {
 }
 .presentation {
   font-size: 62px;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   width: 443px;
   font-weight: 700;
 }
@@ -157,7 +157,7 @@ nav li {
 }
 .introduction {
   height: 38px;
-  font-family: 'Inter', sans-serif;
+  /* font-family: 'Inter', sans-serif; */
   font-size: 16px;
   color: #565656;
   font-weight: 400;
@@ -291,7 +291,7 @@ nav li {
   position: relative;
 }
 .aboutTitleText {
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 20px;
   font-weight: 500;
   text-align: center;
@@ -316,7 +316,7 @@ nav li {
   color: white;
   z-index: 100;
   padding: 30px;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 18px;
   font-weight: 500;
   line-height: 24.3px;
@@ -337,7 +337,7 @@ nav li {
   margin: -130px 0 10px 0;
 }
 .skillsTitle {
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 20px;
   font-weight: 500;
   line-height: 46.2px;
@@ -380,7 +380,7 @@ nav li {
   align-items: center;
   /* width: 33%; */
   height: 200px;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 24px;
   font-weight: 700;
   line-height: 29.05px;
@@ -562,7 +562,7 @@ nav li {
   scroll-margin-top: 100px;
 }
 .projectsTitle {
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 20px;
   font-weight: 500;
   line-height: 46.2px;
@@ -578,7 +578,7 @@ nav li {
   transform: translateX(-50%);
 }
 .projectsTitleText {
-  font-family: Inter;
+  /* font-family: Inter; */
   content: '';
   width: 260px;
   z-index: 0;
@@ -946,7 +946,7 @@ nav li {
 }
 .contactTitle {
   margin: 0 0 50px 0;
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 20px;
   font-weight: 500;
   line-height: 46.2px;
@@ -991,7 +991,7 @@ nav li {
   margin: 0 0 30px 0;
 }
 .contactInvite {
-  font-family: Inter;
+  /* font-family: Inter; */
   font-size: 28px;
   font-weight: 700;
   line-height: 33.89px;
@@ -1004,7 +1004,7 @@ nav li {
   text-shadow: -4px 4px 1px rgb(181 181 181);
 }
 .contactText {
-  font-family: Inter;
+  /*  font-family: Inter; */
   font-size: 16px;
   font-weight: 400;
   line-height: 23.68px;
@@ -1478,13 +1478,13 @@ nav {
     font-size: 20px;
     display: flex;
     align-items: center;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     margin: 0px 0 30px 0;
   }
 
   .presentation {
     font-size: 30px;
-    font-family: 'Inter', sans-serif;
+    /*  font-family: 'Inter', sans-serif; */
     width: 90vw;
     font-weight: 700;
     margin: 0 0 30px 0;
@@ -1496,7 +1496,7 @@ nav {
 
   .introduction {
     height: 38px;
-    font-family: 'Inter', sans-serif;
+    /* font-family: 'Inter', sans-serif; */
     font-size: 16px;
     color: #565656;
     font-weight: 400;
@@ -1580,7 +1580,7 @@ nav {
     align-items: center;
     /* width: 33%; */
     height: 200px;
-    font-family: Inter;
+    /*  font-family: Inter; */
     font-size: 18px;
     font-weight: 700;
     line-height: 29.05px;
@@ -1619,7 +1619,7 @@ nav {
   }
   .contactTitle {
     margin: 0 0 50px 0;
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 20px;
     font-weight: 500;
     line-height: 46.2px;
@@ -1649,7 +1649,7 @@ nav {
     margin: 0 100px 0 0;
   }
   .contactInvite {
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 20px;
     font-weight: 700;
     line-height: 33.89px;
@@ -1659,7 +1659,7 @@ nav {
     margin: 0 0 10px 0;
   }
   .contactText {
-    font-family: Inter;
+    /* font-family: Inter; */
     font-size: 16px;
     font-weight: 400;
     line-height: 23.68px;
