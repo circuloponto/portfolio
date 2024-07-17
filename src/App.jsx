@@ -9,6 +9,7 @@ import Projects from './components/Projects';
 import Slider2 from './components/Slider.jsx'; */
 
 import Skills from './components/Skills';
+import { FaArrowUp } from 'react-icons/fa';
 /* ß */
 /* import { EmblaCarousel } from './components/SliderEmbla.jsx'; */
 import EmblaCarousel from './components/EmblaCarousel.jsx';
@@ -19,12 +20,25 @@ const OPTIONS = {
     '(min-width: 768px)': { active: false },
   }, */
 };
-const SLIDE_COUNT = 5;
-const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
+//const SLIDE_COUNT = 5;
+//const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
 //const SLIDES = []
+
 function App() {
   return (
     <div className="App">
+      <div
+        className="scrollTopButton"
+        onClick={() =>
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth',
+            transition: '0.1s ease-on-out',
+          })
+        }
+      >
+        <FaArrowUp />
+      </div>
       <Patern />
       <Navbar />
       {/*  <NavbarDesktop /> */}

@@ -24,11 +24,11 @@ const Contact = () => {
       <div className="contactTitle">
         <div className="contactTitleText">CONTACT ME</div>
       </div>
-      <div className="contactOverlay"></div>
+      {/* <div className="contactOverlay"></div> */}
       <div className="contactWrapper">
         <div className="contactInfo">
           <div className="contactInvite">
-            I&apos;d Love to Hear from <span>You</span>
+            I&apos;d Love to Hear from <span>You!</span>
           </div>
           <div className="contactText">
             If you have any questions regarding my work don&apos;t hesitate,

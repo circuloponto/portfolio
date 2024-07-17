@@ -24,9 +24,9 @@ const EmblaCarousel = (props) => {
 
   return (
     <section id="section4" className="embla">
-      <div className="projectsTitle">
-        <div className="projectsTitleText">PROJECTS</div>
-      </div>
+      {/* <div className="projectsTitle"> */}
+      <div className="projectsTitleText">PROJECTS</div>
+      {/* </div> */}
       <div className="embla__viewport" ref={emblaRef}>
         <div className="embla__container">
           {/* {slides.map((index) => (
@@ -52,7 +52,7 @@ const EmblaCarousel = (props) => {
                     href="http://consultis.pt"
                     className="link"
                   >
-                    go to website
+                    Launch Website
                   </a>
                 </div>
               </div>
@@ -76,7 +76,7 @@ const EmblaCarousel = (props) => {
                     href="http://consultis.pt"
                     className="link"
                   >
-                    go to website
+                    Launch Website
                   </a>
                 </div>
               </div>
@@ -100,7 +100,7 @@ const EmblaCarousel = (props) => {
                     href="http://consultis.pt"
                     className="link"
                   >
-                    go to website
+                    Launch Website
                   </a>
                 </div>
               </div>
@@ -124,7 +124,7 @@ const EmblaCarousel = (props) => {
                     href="http://consultis.pt"
                     className="link"
                   >
-                    go to website
+                    Launch Website
                   </a>
                 </div>
               </div>

@@ -48,9 +48,9 @@ const Footer = () => {
           </svg>
           +351 915224967
         </div> */}
-        <a href="#section1" className="footerHome">
+        {/*  <a href="#section1" className="footerHome">
           Home
-        </a>
+        </a> */}
         <a href="#section2" className="footerAbout">
           About
         </a>

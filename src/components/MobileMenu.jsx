@@ -5,14 +5,15 @@ import useIntersectionObserver from '../useIntersectionObserver';
 
 function Navbar() {
   const navRef = useRef();
+  const buttonRef = useRef();
 
   const showNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
-    /* navRef.current.classList.toggle('grid_nav'); */
+    buttonRef.current.classList.toggle('grid_nav');
   };
   const hideNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
-    /* navRef.current.classList.toggle('grid_nav'); */
+    buttonRef.current.classList.toggle('grid_nav');
   };
   const [activeId, setActiveId] = useState('');
   useIntersectionObserver(setActiveId);
@@ -20,31 +21,35 @@ function Navbar() {
   return (
     <header className="header">
       {/*  <Pattern /> */}
-      <h3>PORTFOLIO</h3>
+      <h3>
+        <a className="logo" href="#section1">
+          {/*  <span>P</span>ORTFOLIO */}
+        </a>
+      </h3>
       <nav className="nav" ref={navRef}>
-        <li className={activeId === 'section1' ? 'active' : ''}>
+        {/*  <li className={activeId === 'section1' ? 'active' : ''}>
           <a onClick={hideNavbar} href="#section1">
             Home
           </a>
-        </li>
+        </li> */}
         <li className={activeId === 'section2' ? 'active' : ''}>
-          <a onClick={hideNavbar} href="#section2">
+          <a className="afterMenuItems" onClick={hideNavbar} href="#section2">
             About
           </a>
         </li>
 
         <li className={activeId === 'section3' ? 'active' : ''}>
-          <a onClick={hideNavbar} href="#section3">
+          <a className="afterMenuItems" onClick={hideNavbar} href="#section3">
             Skills
           </a>
         </li>
         <li className={activeId === 'section4' ? 'active' : ''}>
-          <a onClick={hideNavbar} href="#section4">
+          <a className="afterMenuItems" onClick={hideNavbar} href="#section4">
             Projects
           </a>
         </li>
         <li className={activeId === 'section5' ? 'active' : ''}>
-          <a onClick={hideNavbar} href="#section5">
+          <a className="afterMenuItems" onClick={hideNavbar} href="#section5">
             Contact
           </a>
         </li>
@@ -84,11 +89,15 @@ function Navbar() {
           </a>
         </div>
 
-        <button className="nav-btn nav-close-btn" onClick={showNavbar}>
+        <button
+          className="nav-btn nav-close-btn"
+          ref={buttonRef}
+          onClick={showNavbar}
+        >
           <FaTimes />
         </button>
       </nav>
-      <button className="nav-btn" onClick={showNavbar}>
+      <button className="nav-btn" ref={buttonRef} onClick={showNavbar}>
         <FaBars />
       </button>
     </header>
