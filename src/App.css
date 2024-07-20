@@ -3653,6 +3653,7 @@ textarea:focus {
     height: 450px;
     width: 100vw;
     background: rgb(85 67 72 / 67%);
+    background: #8d8184;
     color: black;
     /* padding: 50px; */
     display: flex;
