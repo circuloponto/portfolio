@@ -843,6 +843,7 @@ nav {
   /* scroll-margin-top: 100px; */
   position: relative;
   background: rgb(255 69 0 / 10%);
+  background: rgb(255 69 0 / 4%);
 }
 .outlineDotsSkills {
   width: 50px;
@@ -2748,12 +2749,14 @@ textarea:focus {
   }
   header .responsive_nav {
     height: 99.7vh;
-    width: 100vw;
+    width: 102vw;
     transform: translateY(100vh);
     background: white;
+    background: #f2f2f2;
     transition: 0.3s;
     border-bottom: 4px solid #ea3d3c;
     border-radius: 6px;
+    margin: 0 0 0 -10px;
   }
 
   nav a {
