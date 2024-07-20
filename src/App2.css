@@ -832,10 +832,12 @@ nav {
   align-items: center;
   justify-content: flex-start;
   width: 100vw;
-  height: 1230px;
-  /* margin: 0px 0 150px 0; */
+
+  height: 1050px;
+  padding: 0px 0 150px 0;
   box-shadow: 1px 0px 3px #00000038;
   /* scroll-margin-top: 100px; */
+
   position: relative;
 }
 .outlineDotsSkills {
@@ -858,7 +860,7 @@ nav {
   letter-spacing: 10px;
   border: 2px solid #000000;
   position: relative;
-  margin: 100px 0 150px 0;
+  margin: 100px 0 120px 0;
 }
 .skillsTitle::after {
   position: absolute;
@@ -876,13 +878,13 @@ nav {
 
 .individualSkill {
   width: 100vw;
+
   display: grid;
-  height: 1700px;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+
   justify-content: flex-start;
   align-items: flex-start;
-  margin: 0 0 150px 0;
 }
 .skill {
   display: flex;
@@ -2492,11 +2494,11 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
     width: 100vw;
-    height: 1280px;
-    /* padding: 100px 0; */
-    margin: 0px 0 0 0;
+    height: auto;
+    padding: 100px 0;
+    margin: -30px 0 10px 0;
   }
   .skill {
     display: flex;
@@ -2512,12 +2514,21 @@ textarea:focus {
     text-align: center;
   }
   .skillsTitle {
-    margin: 100px 0 150px 0;
+    margin: 0px 0 0 0;
   }
   .individualSkill {
-    margin: 0px 0 150px 0;
+    height: auto;
+    width: 100vw;
+    /* background: white; */
+    display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(3, 1fr);
+    /*  background: linear-gradient(#000, #000) center/2px 100% no-repeat;
+ */
+    /* padding: 50px; */
+    justify-content: center;
+    align-items: center;
+    margin: 50px 0 0 0;
   }
   .icon {
     width: 50px;
@@ -2536,11 +2547,22 @@ textarea:focus {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
+    justify-content: center;
+    /* margin: 50px 0;*/
   }
   .contactTitle {
-    margin: 100px 0 150px 0;
+    margin: 100px 0 120px 0;
+    /* font-family: Inter; */
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 46.2px;
+    text-align: center;
+    color: white;
     width: 240px;
+    padding: 10px;
+    /* border-bottom: 3px solid #ea3d3c; */
+    color: black;
+    letter-spacing: 10px;
   }
   .contactWrapper {
     display: flex;
@@ -2549,7 +2571,6 @@ textarea:focus {
     align-items: center;
     width: 90vw;
     height: auto;
-    margin: 0 0 150px 0;
     border: 1px solid rgba(255, 0, 0, 0);
   }
   /* .contactInfo {
@@ -2946,23 +2967,6 @@ textarea:focus {
   .overlay {
     height: 1010px;
   }
-  .contactTitle {
-    margin: 100px 0 150px 0;
-    width: 200px;
-    letter-spacing: 5px;
-  }
-  .contactTitle::after {
-    z-index: -1;
-    position: absolute;
-    top: 15px;
-    left: 10px;
-    border-radius: 3px;
-    content: '';
-    width: 230px;
-    height: 70px;
-    background: #ea3c3c;
-    box-shadow: 10px 10px 2px #00000014;
-  }
 }
 @media only screen and (max-width: 400px) {
   .logoContainer {
@@ -3123,21 +3127,6 @@ textarea:focus {
   .overlay {
     height: 1050px;
   }
-  .formName {
-    width: 95%;
-  }
-  .formEmail {
-    width: 95%;
-  }
-  .formSubject {
-    display: flex;
-    align-items: center;
-    margin: 0 0 20px 0;
-    width: 95%;
-  }
-  .formMessage {
-    width: 95%;
-  }
 }
 @media only screen and (max-width: 350px) {
   .points {
@@ -3293,7 +3282,8 @@ textarea:focus {
   }
   .skills {
     padding: 0px 0;
-    height: 1280px;
+    margin: 0px 0 10px 0;
+    height: 1100px;
   }
   .skillsTitle {
     /* font-family: Inter; */
@@ -3305,18 +3295,15 @@ textarea:focus {
     width: 155px;
     left: 10px;
   }
-  .projects {
-    height: 960px;
-    justify-content: flex-start;
-  }
   .embla {
     overflow: hidden;
-    height: 500px;
+    height: 850px;
     padding: 0px 0;
     width: 90vw;
+
     z-index: 1000000000;
-    /* position: relative; */
-    margin: 0 0 150px 0;
+    /*  position: relative; */
+    margin: 0 0 10px 0;
   }
 
   .projectsTitleText {
@@ -3325,7 +3312,7 @@ textarea:focus {
     width: 140px;
     padding: 5px 30px;
     position: relative;
-    margin: 100px 0 150px 0;
+    margin: 20px 0 130px 0;
   }
   .projectsTitleText::after {
     position: absolute;
@@ -3365,24 +3352,30 @@ textarea:focus {
     width: 80vw;
     margin: 0 0 140px 0;
   }
-
-  .contactInviteText {
-    width: 200px;
+  .contactInvite {
+    /* font-family: Inter; */
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 33.89px;
+    text-align: left;
+    width: 100vw;
+    color: black;
+    margin: 0 0 30px 0;
   }
   .contactText {
     /* font-family: Inter; */
     font-size: 15px;
-    width: 85vw;
+
     padding: 5px 10px;
-    /* margin: 0 0 40px 0; */
+    margin: 0 0 40px 0;
   }
 }
 @media only screen and (max-width: 285px) {
   .about {
-    height: 1320px;
+    height: 1110px;
   }
   .overlay {
-    height: 1320px;
+    height: 1110px;
   }
 }
 .absolute2 {

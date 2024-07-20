@@ -20,7 +20,7 @@ const Contact = () => {
     e.target.reset();
   };
   return (
-    <section id="section5" className="contact">
+    <section id="contact" className="contact">
       <div className="contactTitle">
         <div className="contactTitleText">CONTACT ME</div>
       </div>
@@ -28,8 +28,72 @@ const Contact = () => {
       <div className="contactWrapper">
         <div className="contactInfo">
           <div className="contactInvite">
-            I&apos;d Love to Hear from <span>You!</span>
+            <div className="contactInviteText">I&apos;d Love to Hear from</div>
+            <span>You!</span>
+            <div className="pixelMe">
+              <div className="pixel pixel1"></div>
+              <div className="pixel pixel2"></div>
+              <div className="pixel pixel3"></div>
+              <div className="pixel pixel4"></div>
+              <div className="pixel pixel5"></div>
+              <div className="pixel pixel6"></div>
+              <div className="pixel pixel7"></div>
+              <div className="pixel pixel8"></div>
+              <div className="pixel pixel9"></div>
+              <div className="pixel pixel10"></div>
+              <div className="pixel pixel11"></div>
+              <div className="pixel pixel12"></div>
+              <div className="pixel pixel13"></div>
+              <div className="pixel pixel14"></div>
+              <div className="pixel pixel15"></div>
+              <div className="pixel pixel16"></div>
+              <div className="pixel pixel17"></div>
+              <div className="pixel pixel18"></div>
+              <div className="pixel pixel19"></div>
+              <div className="pixel pixel20"></div>
+              <div className="pixel pixel21"></div>
+              <div className="pixel pixel22"></div>
+              <div className="pixel pixel23"></div>
+              <div className="pixel pixel24"></div>
+              <div className="pixel pixel25"></div>
+              <div className="pixel pixel26"></div>
+              <div className="pixel pixel27"></div>
+              <div className="pixel pixel28"></div>
+              <div className="pixel pixel29"></div>
+              <div className="pixel pixel30"></div>
+              <div className="pixel pixel31"></div>
+              <div className="pixel pixel32"></div>
+              <div className="pixel pixel33"></div>
+              <div className="pixel pixel34"></div>
+              <div className="pixel pixel35"></div>
+              <div className="pixel pixel36"></div>
+              <div className="pixel pixel37"></div>
+              <div className="pixel pixel38"></div>
+              <div className="pixel pixel39"></div>
+              <div className="pixel pixel40"></div>
+              <div className="pixel pixel41"></div>
+              <div className="pixel pixel42"></div>
+              <div className="pixel pixel43"></div>
+              <div className="pixel pixel44"></div>
+              <div className="pixel pixel45"></div>
+              <div className="pixel pixel46"></div>
+              <div className="pixel pixel47"></div>
+              <div className="pixel pixel48"></div>
+              <div className="pixel pixel49"></div>
+              <div className="pixel pixel50"></div>
+              <div className="pixel pixel51"></div>
+              <div className="pixel pixel52"></div>
+              <div className="pixel pixel53"></div>
+              <div className="pixel pixel54"></div>
+              <div className="pixel pixel55"></div>
+              <div className="pixel pixel56"></div>
+              <div className="pixel pixel57"></div>
+              <div className="pixel pixel58"></div>
+              <div className="pixel pixel59"></div>
+              <div className="pixel pixel60"></div>
+            </div>
           </div>
+
           <div className="contactText">
             If you have any questions regarding my work don&apos;t hesitate,
             drop me a line by email or on the form.
@@ -95,21 +159,40 @@ const Contact = () => {
         <div className="contactForm">
           <form ref={form} onSubmit={sendEmail}>
             <div className="formName">
-              <input name="name" type="text" placeholder="Your Name" />
-              {/*  <input name="lastName" type="text" placeholder="Last Name" /> */}
+              <input
+                name="name"
+                type="text"
+                required
+                //placeholder="Your Name"
+              />
+              <span className="floating-label">Your Name</span>
             </div>
             <div className="formEmail">
-              <input name="email" type="text" placeholder="Email Address" />
+              <input
+                name="email"
+                type="text"
+                required
+                //placeholder="Email Address"
+              />
+              <span className="floating-label">Your Email</span>
             </div>
             <div className="formSubject">
-              <input name="subject" type="text" placeholder="Subject" />
+              <input
+                name="subject"
+                type="text"
+                required
+                //placeholder="Subject"
+              />
+              <span className="floating-label"> Your Subject</span>
             </div>
             <div className="formMessage">
               <textarea
                 name="message"
                 id=""
-                placeholder="Your Message"
+                //placeholder="Your Message"
+                required
               ></textarea>
+              <span className="floating-label">Your Message</span>
             </div>
             {/*  <button type="submit" className="button-52TS">
               Send Message

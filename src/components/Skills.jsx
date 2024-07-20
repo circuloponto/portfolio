@@ -1,6 +1,7 @@
 const Skills = () => {
   return (
-    <section id="section3" className="skills">
+    <section id="skills" className="skills">
+      {/* <div className="outlineDotsSkills"></div> */}
       <div className="skillsTitle">SKILLS</div>
       {/* <div className="shape1"></div>
       <div className="shape2"></div> */}

@@ -1,7 +1,7 @@
-import { useState, useRef } from 'react';
+import { useState, useRef, useEffect, useLayoutEffect } from 'react';
+import clsx from 'clsx';
 import { FaBars, FaTimes } from 'react-icons/fa';
 import '../App.css';
-import useIntersectionObserver from '../useIntersectionObserver';
 
 function Navbar() {
   const navRef = useRef();
@@ -9,50 +9,139 @@ function Navbar() {
 
   const showNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
-    buttonRef.current.classList.toggle('grid_nav');
+    //buttonRef.current.classList.toggle('grid_nav');
   };
   const hideNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
-    buttonRef.current.classList.toggle('grid_nav');
+    //buttonRef.current.classList.toggle('grid_nav');
   };
-  const [activeId, setActiveId] = useState('');
-  useIntersectionObserver(setActiveId);
+  /* useEffect(() => {
+    let sec = document.querySelectorAll('section');
+    let links = document.querySelectorAll('nav li a');
+
+    window.onscroll = () => {
+      console.log('it WORKS');
+      sec.forEach((section) => {
+        let top = window.scrollY;
+        let offset = section.offsetTop;
+        let height = section.offsetHeight;
+        let id = section.getAttribute('id');
+        if (top >= offset && top < offset + height) {
+          console.log('top is >=');
+          links.forEach((link) => {
+            console.log('inside the loop');
+            link.classList.remove('active');
+            document
+              .querySelector('nav li a[href*=' + id + ']')
+              .classList.add('active');
+          });
+        }
+      });
+    };
+  }); */
+  const capitalize = (text) => text.charAt(0).toUpperCase() + text.substr(1);
+
+  const clamp = (value) => Math.max(0, value);
+
+  const isBetween = (value, floor, ceil) => value >= floor && value <= ceil;
+
+  // hooks
+  const useScrollspy = (ids, offset = 0) => {
+    console.log('ITS CALLED');
+    const [activeId, setActiveId] = useState('');
+
+    useLayoutEffect(() => {
+      const listener = () => {
+        const scroll = window.scrollY;
+
+        const position = ids
+          .map((id) => {
+            const element = document.getElementById(id);
+
+            if (!element) return { id, top: -1, bottom: -1 };
+
+            const rect = element.getBoundingClientRect();
+            const top = clamp(rect.top + scroll - offset);
+            const bottom = clamp(rect.bottom + scroll - offset);
+
+            return { id, top, bottom };
+          })
+          .find(({ top, bottom }) => isBetween(scroll, top, bottom));
+
+        setActiveId(position?.id || '');
+      };
+
+      listener();
+
+      window.addEventListener('resize', listener);
+      window.addEventListener('scroll', listener);
+
+      return () => {
+        window.removeEventListener('resize', listener);
+        window.removeEventListener('scroll', listener);
+      };
+    }, [ids, offset]);
+
+    return activeId;
+  };
+  const ids = ['home', 'about', 'skills', 'projects', 'contact'];
+  const activeId = useScrollspy(ids, 0); // 54 is navigation height
 
   return (
     <header className="header">
       {/*  <Pattern /> */}
       <h3>
-        <a className="logo" href="#section1">
-          {/*  <span>P</span>ORTFOLIO */}
-        </a>
+        <div className="logoContainer">
+          <div className="logo"></div>
+          <a className="logoText" href="#section1">
+            <span>P</span>ORTFOLIO
+          </a>
+        </div>
       </h3>
       <nav className="nav" ref={navRef}>
-        {/*  <li className={activeId === 'section1' ? 'active' : ''}>
+        {ids.map((id) => (
+          <li key={`menu-item-${id}`} className="menu-item">
+            <a
+              href={`#${id}`}
+              className={clsx(
+                'menu-link',
+                id === activeId && 'menu-link-active'
+              )}
+              onClick={hideNavbar}
+            >
+              {capitalize(id)}
+            </a>
+          </li>
+        ))}
+        {/* <li>
           <a onClick={hideNavbar} href="#section1">
             Home
           </a>
         </li> */}
-        <li className={activeId === 'section2' ? 'active' : ''}>
-          <a className="afterMenuItems" onClick={hideNavbar} href="#section2">
+        {/*  <li>
+          <a
+            className="afterMenuItems"
+            onClick={hideNavbar}
+            href="#section2">
             About
           </a>
         </li>
 
-        <li className={activeId === 'section3' ? 'active' : ''}>
+        <li>
           <a className="afterMenuItems" onClick={hideNavbar} href="#section3">
             Skills
           </a>
         </li>
-        <li className={activeId === 'section4' ? 'active' : ''}>
+        <li>
           <a className="afterMenuItems" onClick={hideNavbar} href="#section4">
             Projects
           </a>
         </li>
-        <li className={activeId === 'section5' ? 'active' : ''}>
+        <li>
           <a className="afterMenuItems" onClick={hideNavbar} href="#section5">
             Contact
           </a>
-        </li>
+        </li> */}
 
         <div className="socials">
           <a
@@ -90,6 +179,7 @@ function Navbar() {
         </div>
 
         <button
+          id="hamburgerToClose"
           className="nav-btn nav-close-btn"
           ref={buttonRef}
           onClick={showNavbar}

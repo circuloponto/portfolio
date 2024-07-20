@@ -1,9 +1,31 @@
+import { useScramble } from 'use-scramble';
+
 const Home = () => {
+  const { ref, replay } = useScramble({
+    text: 'Junior Developer',
+    range: [65, 125],
+    speed: 0.7,
+    tick: 1,
+    step: 1,
+    scramble: 15,
+    seed: 0,
+    chance: 1,
+    overdrive: false,
+    overflow: true,
+  });
   return (
-    <section id="section1" className="home">
+    <section id="home" className="home">
       <div className="homeInfo">
         <div className="title">
-          <span></span>Junior Developer
+          <span></span>
+          <div
+            onMouseOver={replay}
+            onFocus={replay}
+            ref={ref}
+            className="textScramble"
+          >
+            Junior Developer
+          </div>
         </div>
         <div className="presentation">
           Hi, my name is <span>Nuno Cortez</span>
@@ -12,12 +34,15 @@ const Home = () => {
           I&apos;m a sound designer turned web developer, currently looking for
           a first opportunity at a frontend position.
         </div>
-        <a href="#section5" className="button-52">
+        <a href="#contact" className="button-52">
           Contact Me
         </a>
       </div>
       <div className="picture">
         <div className="innerPicture">
+          {/* <div className="border"></div> */}
+          <div className="photo"></div>
+          <div className="photoGlitch"></div>
           <div className="points">
             <div className="point"></div>
             <div className="point"></div>
@@ -52,8 +77,6 @@ const Home = () => {
             <div className="point"></div>
             <div className="point"></div>
           </div>
-          {/* <div className="border"></div> */}
-          <div className="photo"></div>
         </div>
       </div>
     </section>
