@@ -30,7 +30,7 @@ const Contact = () => {
           <div className="contactInvite">
             <div className="contactInviteText">I&apos;d Love to Hear from</div>
             <span>You!</span>
-            <div className="pixelMe">
+            {/* <div className="pixelMe">
               <div className="pixel pixel1"></div>
               <div className="pixel pixel2"></div>
               <div className="pixel pixel3"></div>
@@ -91,7 +91,7 @@ const Contact = () => {
               <div className="pixel pixel58"></div>
               <div className="pixel pixel59"></div>
               <div className="pixel pixel60"></div>
-            </div>
+            </div> */}
           </div>
 
           <div className="contactText">

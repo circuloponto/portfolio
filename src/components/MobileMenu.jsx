@@ -94,7 +94,7 @@ function Navbar() {
         <div className="logoContainer">
           <div className="logo"></div>
           <a className="logoText" href="#section1">
-            <span>P</span>ORTFOLIO
+            {/* <span>P</span> */}PORTFOLIO
           </a>
         </div>
       </h3>
