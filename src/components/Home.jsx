@@ -2,7 +2,7 @@ import { useScramble } from 'use-scramble';
 
 const Home = () => {
   const { ref, replay } = useScramble({
-    text: 'Junior Developer',
+    text: 'Frontend Developer',
     range: [65, 125],
     speed: 0.7,
     tick: 1,
@@ -24,7 +24,7 @@ const Home = () => {
             ref={ref}
             className="textScramble"
           >
-            Junior Developer
+            Frontend Developer
           </div>
         </div>
         <div className="presentation">
