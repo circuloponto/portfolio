@@ -2963,6 +2963,21 @@ textarea:focus {
     background: #ea3c3c;
     box-shadow: 10px 10px 2px #00000014;
   }
+  .formName {
+    width: 95%;
+  }
+  .formEmail {
+    width: 95%;
+  }
+  .formSubject {
+    display: flex;
+    align-items: center;
+    margin: 0 0 20px 0;
+    width: 95%;
+  }
+  .formMessage {
+    width: 95%;
+  }
 }
 @media only screen and (max-width: 400px) {
   .logoContainer {
