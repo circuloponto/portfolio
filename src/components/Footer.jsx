@@ -51,16 +51,19 @@ const Footer = () => {
         {/*  <a href="#section1" className="footerHome">
           Home
         </a> */}
-        <a href="#section2" className="footerAbout">
+        <a href="#home" className="footerAbout">
+          Home
+        </a>
+        <a href="#about" className="footerAbout">
           About
         </a>
-        <a href="#section3" className="footerSkills">
+        <a href="#skills" className="footerSkills">
           Skills
         </a>
-        <a href="#section4" className="footerProjects">
+        <a href="#projects" className="footerProjects">
           Projects
         </a>
-        <a href="#section5" className="footerContacts">
+        <a href="#contact" className="footerContacts">
           Contacts
         </a>
       </div>
