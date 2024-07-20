@@ -3042,8 +3042,8 @@ textarea:focus {
   }
   .home {
     width: 100vw;
-    margin: 50px 0 0 0;
-    height: 709px;
+    margin: 20px 0 0 0;
+    height: 739px;
     padding: 0px 0px;
     display: flex;
     flex-direction: column;
