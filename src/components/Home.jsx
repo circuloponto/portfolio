@@ -1,5 +1,6 @@
 import { useScramble } from 'use-scramble';
-
+import { motion, useScroll } from 'framer-motion';
+import { useState, useEffect } from 'react';
 const Home = () => {
   const { ref, replay } = useScramble({
     text: 'Frontend Developer',
@@ -13,8 +14,28 @@ const Home = () => {
     overdrive: false,
     overflow: true,
   });
+
+  const [width, setWidth] = useState(window.innerWidth);
+  const breakpoint = 400;
+  useEffect(() => {
+    const handleResizeWindow = () => setWidth(window.innerWidth);
+    // subscribe to window resize event "onComponentDidMount"
+    window.addEventListener('resize', handleResizeWindow);
+    return () => {
+      // unsubscribe "onComponentDestroy"
+      window.removeEventListener('resize', handleResizeWindow);
+    };
+  }, []);
+
+  const { scrollYProgress } = useScroll();
   return (
     <section id="home" className="home">
+      {width < breakpoint ? (
+        <motion.div
+          className="progress-bar"
+          style={{ scaleX: scrollYProgress }}
+        />
+      ) : null}
       <div className="homeInfo">
         <div className="title">
           <span></span>

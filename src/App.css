@@ -436,7 +436,17 @@ nav {
   padding: 100px 0 40px;
   /* border-left: 8px dotted #ea3c3c11; */
 }
-
+.progress-bar {
+  position: fixed;
+  top: 0px;
+  left: 0;
+  right: 0;
+  border-radius: 0px;
+  height: 4px;
+  background: #ea3c3c;
+  transform-origin: 50%;
+  z-index: 10000000000;
+}
 .homeInfo {
   width: 40vw;
   height: 400px;
@@ -550,7 +560,7 @@ nav {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  image-rendering: pixelated;
+  /* image-rendering: pixelated; */
 
   /* box-shadow: 5px 5px 13px #0000007a; */
   /*  border: 1px solid red; */
@@ -3687,7 +3697,7 @@ textarea:focus {
     justify-content: flex-start;
     align-items: flex-start;
     box-shadow: -1px -3px 1px #545454;
-    /* border-left: 4px solid #cf5051; */
+    border-bottom: 3px solid #545454;
   }
   .footerHeader {
     width: 200px;
