@@ -1,3 +1,4 @@
+//import { useState, useRef, useEffect } from 'react';
 import './App.css';
 import About from './components/About';
 import Contact from './components/Contact';
@@ -10,35 +11,25 @@ import Slider2 from './components/Slider.jsx'; */
 
 import Skills from './components/Skills';
 import { FaArrowUp } from 'react-icons/fa';
-/* ß */
-/* import { EmblaCarousel } from './components/SliderEmbla.jsx'; */
+//import { motion, transform } from 'framer-motion';
+
+import AnimatedCursor from 'react-animated-cursor';
 import EmblaCarousel from './components/EmblaCarousel.jsx';
 import Patern from './components/Patern.jsx';
 const OPTIONS = {
   loop: true,
-  /* breakpoints: {
-    '(min-width: 768px)': { active: false },
-  }, */
 };
-//const SLIDE_COUNT = 5;
-//const SLIDES = Array.from(Array(SLIDE_COUNT).keys());
-//const SLIDES = []
-
+const scrollTop = () => {
+  window.scrollTo(0, 0);
+};
 function App() {
   return (
     <div className="App">
-      <div
-        className="scrollTopButton"
-        onClick={() =>
-          window.scrollTo({
-            top: 0,
-            behavior: 'smooth',
-            transition: '0.1s ease-on-out',
-          })
-        }
-      >
+      <AnimatedCursor innerSize={12} outerSize={25} outerScale={2} />
+      <div className="scrollTopButton" onClick={scrollTop}>
         <FaArrowUp />
       </div>
+
       <Patern />
       <Navbar />
       {/*  <NavbarDesktop /> */}

@@ -1,8 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=VT323&display=swap');
-@font-face {
-  font-family: 'Decovar Regular24';
-  src: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/209981/Decovar-VF.ttf');
-}
+/* @import 'cursor'; */
 * {
   margin: 0;
   padding: 0;
@@ -109,29 +106,20 @@ nav li {
 .logoContainer {
   display: flex;
   width: 300px;
-  width: 500px;
-  font-family: 'Decovar Regular24';
-  color: #ffffff;
-  color: #ea3c3c;
-  font-size: 45px;
-  font-variation-settings: 'SSTR' 1000;
-  -webkit-animation: loadin 5s infinite ease-in-out;
-  animation: loadin 5s infinite ease-in-out;
-  transform: translateZ(0);
+  background: rgba(0, 128, 0, 0);
 }
 .logo {
   width: 60px;
   height: 50px;
   position: relative;
   background: #f2f2f2;
-  background: url('./logo_nc.png');
+  background: url('./logo_alone.png');
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
   background-size: contain;
-  z-index: 0;
+  z-index: 1000000;
   display: flex;
-  filter: drop-shadow(2px 4px 0px #0000003b);
   align-items: center;
   justify-content: center;
 }
@@ -198,7 +186,7 @@ header {
   top: 0;
   left: 0;
   background: #f2f2f2;
-  z-index: 10;
+  z-index: 10000000000;
 }
 
 @keyframes gradient {
@@ -365,7 +353,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-around;
-  z-index: 0;
+  z-index: 200;
   width: 70vw;
 }
 .absolute {
@@ -423,7 +411,7 @@ nav {
   right: 50px;
   width: 30px;
   height: 30px;
-  z-index: 1;
+  z-index: 10000000000;
   border-radius: 100%;
   background: #ea3c3c;
   transition: 0.3s;
@@ -460,7 +448,7 @@ nav {
   height: 4px;
   background: #ea3c3c;
   transform-origin: 50%;
-  z-index: 0;
+  z-index: 10000000000;
 }
 .homeInfo {
   width: 40vw;
@@ -784,7 +772,6 @@ nav {
   border-bottom: 3px solid #ea3c3c;
   box-sizing: content-box;
   /* margin: 0 0 30px 0;*/
-  z-index: 0;
 }
 .overlay {
   position: absolute;
@@ -803,7 +790,7 @@ nav {
   border-left: 8px dotted rgba(255, 255, 255, 0.133);
 }
 .aboutTitle {
-  z-index: 0;
+  z-index: 100;
   margin: 100px 0 150px 0;
   position: relative;
 }
@@ -815,7 +802,7 @@ nav {
   color: white;
   padding: 15px 20px;
   letter-spacing: 10px;
-  z-index: 0;
+  z-index: 100;
   border: 2px solid white;
   border: 2px solid #ffffff52;
   position: relative;
@@ -1260,7 +1247,7 @@ nav {
   width: 70%;
   height: 50%;
   border-radius: 20px;
-  z-index: 0;
+  z-index: 10;
   /* border: 3px solid #f59904; */
   /* position: relative; */
   /* filter: grayscale(100%); */
@@ -1291,7 +1278,7 @@ nav {
   width: 70%;
   height: 50%;
   border-radius: 20px;
-  z-index: 0;
+  z-index: 10;
   /* position: relative; */
   /* filter: grayscale(100%); */
   background-image: url(/src/image/2.jpg);
@@ -1308,7 +1295,7 @@ nav {
   width: 70%;
   height: 50%;
   border-radius: 20px;
-  z-index: 0;
+  z-index: 10;
   /* position: relative; */
   /* filter: grayscale(100%); */
   background-image: url(/src/image/3.jpg);
@@ -1325,7 +1312,7 @@ nav {
   width: 70%;
   height: 50%;
   border-radius: 20px;
-  z-index: 0;
+  z-index: 10;
   /* position: relative; */
   /* filter: grayscale(100%); */
   background-image: url(/src/image/4.jpg);
@@ -1470,7 +1457,7 @@ nav {
   box-shadow: inset 0 0 0 0.2rem #ea3c3c7a;
   width: 3.6rem;
   height: 3.6rem;
-  z-index: 0;
+  z-index: 1;
   border-radius: 50%;
   color: var(--text-body);
   display: flex;
@@ -1531,7 +1518,7 @@ nav {
 .embla {
   overflow: hidden;
   width: 90vw;
-  z-index: 0;
+  z-index: 1000000000;
   position: relative;
 }
 .embla__slide {
@@ -1585,7 +1572,7 @@ nav {
 .contactTitleText {
   color: rgb(255, 255, 255);
   background: transparent;
-  z-index: 0;
+  z-index: 1000000000;
 }
 .contactOverlay {
   content: '';
@@ -2230,7 +2217,7 @@ textarea:focus {
   margin: 30px -20px 0 10px;
   flex-wrap: wrap;
   font-size: 20px;
-  z-index: 0;
+  z-index: 1000000000;
 }
 .footerRowOne a {
   text-decoration: none;
@@ -2285,18 +2272,18 @@ textarea:focus {
 .rowTwo a svg:hover {
   color: white;
   fill: white;
-  z-index: 0;
+  z-index: 1000000000;
 }
 .linkedin {
   margin: 0 20px 0 0;
   width: 30px;
   height: 50px;
-  z-index: 0;
+  z-index: 1000000000;
 }
 .github {
   width: 30px;
   height: 30px;
-  z-index: 0;
+  z-index: 1000000000;
 }
 .rowThree {
   margin: 20px 0 0 0;
@@ -2771,7 +2758,7 @@ textarea:focus {
     /* padding: 10px; */
     border-left: none;
     border-right: none;
-    z-index: 0;
+    z-index: 1000;
   }
   header .responsive_nav {
     height: 99.7vh;
@@ -3419,11 +3406,7 @@ textarea:focus {
   }
   .scrollTopButton {
     border-radius: 100%;
-    background: #f07575;
-    right: 15px;
-  }
-  .scrollTopButton:hover {
-    transform: scale(1.2);
+    background: #ea3c3cb5;
   }
   header {
     background: #f8f8f8;
@@ -3437,7 +3420,7 @@ textarea:focus {
     box-shadow: -1px 1px 30px rgb(0 0 0 / 18%);
   }
   .logoContainer {
-    width: 95px;
+    width: 35px;
   }
   .logoText {
     width: 200px;
@@ -3445,7 +3428,12 @@ textarea:focus {
     letter-spacing: 5px;
     display: none;
   }
-
+  .scrollTopButton {
+    right: 15px;
+  }
+  .scrollTopButton:hover {
+    transform: scale(1.2);
+  }
   header .nav-btn {
     visibility: visible;
     opacity: 1;
@@ -3558,14 +3546,14 @@ textarea:focus {
     background-color: rgba(0, 0, 0, 0.829);
   }
   .aboutTitle {
-    z-index: 0;
+    z-index: 100;
     margin: 100px 0 100px 0;
     position: relative;
   }
   .aboutText {
     text-indent: 20px;
     color: white;
-    z-index: 0;
+    z-index: 100;
     padding: 0 30px;
     width: 80vw;
     /* font-family: Inter; */
@@ -3734,7 +3722,7 @@ textarea:focus {
     margin: 30px 0px 0 -40px;
     flex-wrap: wrap;
     font-size: 18px;
-    z-index: 0;
+    z-index: 1000000000;
     flex-direction: column;
   }
   .footerRowOne a {
@@ -3781,7 +3769,7 @@ textarea:focus {
     margin: 0 20px 0 0;
     width: 30px;
     height: 50px;
-    z-index: 0;
+    z-index: 1000000000;
     color: #cf5051;
     fill: #cf5051;
   }
@@ -4040,13 +4028,13 @@ textarea:focus {
     height: 1200px;
   }
   .aboutTitle {
-    z-index: 0;
+    z-index: 100;
     position: relative;
     margin: 100px 0 150px 0;
   }
 
   .aboutTitle {
-    z-index: 0;
+    z-index: 100;
     position: relative;
     margin: 30px 0 0 0;
   }
@@ -4083,7 +4071,7 @@ textarea:focus {
     height: 500px;
     padding: 0px 0;
     width: 90vw;
-    z-index: 0;
+    z-index: 1000000000;
     /* position: relative; */
     margin: 0 0 150px 0;
   }

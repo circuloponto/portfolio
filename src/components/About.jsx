@@ -1,11 +1,18 @@
+import { motion } from 'framer-motion';
 const About = () => {
   return (
     <section id="about" className="about">
       <div className="overlay"></div>
       {/* <div className="outlineDots"></div> */}
-      <div className="aboutTitle">
+      <motion.div
+        className="aboutTitle"
+        initial={{ x: -200 }}
+        /* animate={{ x: 0, translateY: 0 }} */
+        transition={{ duration: 0.5 }}
+        whileInView={{ x: 0 }}
+      >
         <div className="aboutTitleText">ABOUT ME</div>
-      </div>
+      </motion.div>
       {/* <div className="titleSVG">
         <svg viewBox="0 0 600 300">
           <symbol id="s-text">
@@ -21,7 +28,13 @@ const About = () => {
           <use className="text" xlinkHref="#s-text"></use>
         </svg>
       </div> */}
-      <div className="aboutText">
+      <motion.div
+        className="aboutText"
+        initial={{ x: 200 }}
+        /* animate={{ x: 0, translateY: 0 }} */
+        transition={{ duration: 0.5 }}
+        whileInView={{ x: 0 }}
+      >
         I started my professional career in multimedia as a{' '}
         <span>Sound Designer</span> for animation. After experimenting with
         sound programming with Max Msp I fell in love with the possibilities
@@ -40,7 +53,7 @@ const About = () => {
         <span>A.I. enthusiast</span>.
         {/* I&apos;m a sound designer turned web developer, currently looking for a
         first opportunity as a frontend developer. */}
-      </div>
+      </motion.div>
     </section>
   );
 };

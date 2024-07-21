@@ -1,13 +1,18 @@
+import { motion } from 'framer-motion';
+
 const Skills = () => {
   return (
     <section id="skills" className="skills">
       {/* <div className="outlineDotsSkills"></div> */}
-      <div className="skillsTitle">SKILLS</div>
-      {/* <div className="shape1"></div>
-      <div className="shape2"></div> */}
-      {/* 
-      <div className="shape3"></div>
-      <div className="shape4"></div> */}
+      <motion.div
+        className="skillsTitle"
+        initial={{ x: -200 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ x: 0 }}
+      >
+        SKILLS
+      </motion.div>
+
       <div className="individualSkill">
         <div className="skill">
           <div className="icon">
@@ -30,6 +35,7 @@ const Skills = () => {
           </div>
           <div className="iconText">HTML</div>
         </div>
+
         <div className="skill">
           <div className="icon">
             <svg
