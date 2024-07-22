@@ -1,5 +1,5 @@
 /* eslint-disable react/prop-types */
-
+import { motion } from 'framer-motion';
 import { DotButton, useDotButton } from './EmblaCarouselDotButton';
 import {
   PrevButton,
@@ -26,9 +26,21 @@ const EmblaCarousel = (props) => {
     <section id="projects" className="projects">
       {/* <div className="outlineDotsProjects"></div> */}
       <div className="projectsTitleText">
-        <div className="projectsTitle">PROJECTS</div>
+        <motion.div
+          className="projectsTitle"
+          initial={{ x: -200 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ x: 0 }}
+        >
+          PROJECTS
+        </motion.div>
       </div>
-      <section className="embla">
+      <motion.section
+        className="embla"
+        initial={{ y: 200 }}
+        transition={{ duration: 0.5 }}
+        whileInView={{ y: 0 }}
+      >
         {/* <div className="projectsTitle"> */}
 
         {/* </div> */}
@@ -161,7 +173,7 @@ const EmblaCarousel = (props) => {
             />
           </div>
         </div>
-      </section>
+      </motion.section>
     </section>
   );
 };

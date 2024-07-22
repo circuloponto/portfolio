@@ -5,11 +5,13 @@ import '../App.css';
 
 function Navbar() {
   const navRef = useRef();
-  const buttonRef = useRef();
+  const buttonRef = useRef(); //é o x de saida
+  const hamburgerButton = useRef(); //é o x de saida
 
   const showNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
-    //buttonRef.current.classList.toggle('grid_nav');
+    buttonRef.current.classList.toggle('showXbutton');
+    hamburgerButton.current.classList.toggle('hideHamburgerButton');
   };
   const hideNavbar = () => {
     navRef.current.classList.toggle('responsive_nav');
@@ -179,15 +181,15 @@ function Navbar() {
         </div>
 
         <button
-          id="hamburgerToClose"
-          className="nav-btn nav-close-btn"
+          //id="hamburgerToClose"
+          className="nav-btn nav-close-btn hamburgerToClose"
           ref={buttonRef}
           onClick={showNavbar}
         >
           <FaTimes />
         </button>
       </nav>
-      <button className="nav-btn" ref={buttonRef} onClick={showNavbar}>
+      <button className="nav-btn" ref={hamburgerButton} onClick={showNavbar}>
         <FaBars />
       </button>
     </header>

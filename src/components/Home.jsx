@@ -51,7 +51,9 @@ const Home = () => {
     <section id="home" className="home">
       {width < breakpoint ? (
         <motion.div className="progress-bar" style={{ scaleX }} />
-      ) : null}
+      ) : (
+        <div className="home"></div>
+      )}
       <div className="homeInfo">
         <motion.div className="title">
           <span></span>

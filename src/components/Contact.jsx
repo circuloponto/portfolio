@@ -1,5 +1,6 @@
 import { useRef } from 'react';
 import emailjs from '@emailjs/browser';
+import { motion } from 'framer-motion';
 const Contact = () => {
   const form = useRef();
   const sendEmail = (e) => {
@@ -22,13 +23,27 @@ const Contact = () => {
   return (
     <section id="contact" className="contact">
       <div className="contactTitle">
-        <div className="contactTitleText">CONTACT ME</div>
+        <motion.div
+          className="contactTitleText"
+          initial={{ x: -200 }}
+          transition={{ duration: 0.5 }}
+          whileInView={{ x: 0 }}
+        >
+          CONTACT ME
+        </motion.div>
       </div>
       {/* <div className="contactOverlay"></div> */}
       <div className="contactWrapper">
         <div className="contactInfo">
           <div className="contactInvite">
-            <div className="contactInviteText">I&apos;d Love to Hear from</div>
+            <motion.div
+              className="contactInviteText"
+              initial={{ x: -200 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ x: 0 }}
+            >
+              I&apos;d Love to Hear from
+            </motion.div>
             <span>You!</span>
             {/* <div className="pixelMe">
               <div className="pixel pixel1"></div>
@@ -94,12 +109,27 @@ const Contact = () => {
             </div> */}
           </div>
 
-          <div className="contactText">
+          <motion.div
+            className="contactText"
+            initial={{ x: -200 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ x: 0 }}
+          >
             If you have any questions regarding my work don&apos;t hesitate,
             drop me a line by email or on the form.
-          </div>
-          <div className="threeIcons">
-            <div className="location">
+          </motion.div>
+          <motion.div
+            className="threeIcons"
+            initial={{ x: -200 }}
+            transition={{ duration: 0.5 }}
+            whileInView={{ x: 0 }}
+          >
+            <motion.div
+              className="location"
+              initial={{ x: -100 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ x: 0 }}
+            >
               <div className="contactIcon">
                 <svg
                   width="24"
@@ -117,8 +147,13 @@ const Contact = () => {
                 </svg>
               </div>
               <div className="locationText">Porto, Portugal</div>
-            </div>
-            <div className="email">
+            </motion.div>
+            <motion.div
+              className="email"
+              initial={{ x: -200 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ x: 0 }}
+            >
               <div className="contactEmail">
                 <svg
                   width="21"
@@ -134,8 +169,13 @@ const Contact = () => {
                 </svg>
               </div>
               <div className="emailText">nucortez1@gmail.com</div>
-            </div>
-            <div className="mobile">
+            </motion.div>
+            <motion.div
+              className="mobile"
+              initial={{ x: -50 }}
+              transition={{ duration: 0.5 }}
+              whileInView={{ x: 0 }}
+            >
               <div className="contactMobile">
                 <svg
                   width="24"
@@ -153,8 +193,8 @@ const Contact = () => {
                 </svg>
               </div>
               <div className="mobileText">+351 915224967</div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
         <div className="contactForm">
           <form ref={form} onSubmit={sendEmail}>

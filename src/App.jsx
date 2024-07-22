@@ -11,7 +11,7 @@ import Slider2 from './components/Slider.jsx'; */
 
 import Skills from './components/Skills';
 import { FaArrowUp } from 'react-icons/fa';
-//import { motion, transform } from 'framer-motion';
+import { motion, transform } from 'framer-motion';
 
 import AnimatedCursor from 'react-animated-cursor';
 import EmblaCarousel from './components/EmblaCarousel.jsx';
@@ -25,7 +25,12 @@ const scrollTop = () => {
 function App() {
   return (
     <div className="App">
-      <AnimatedCursor innerSize={12} outerSize={25} outerScale={2} />
+      {/*   <AnimatedCursor
+        className="progress"
+        innerSize={12}
+        outerSize={25}
+        outerScale={2}
+      /> */}
       <div className="scrollTopButton" onClick={scrollTop}>
         <FaArrowUp />
       </div>
